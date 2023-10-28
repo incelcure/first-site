@@ -24,7 +24,7 @@ SECRET_KEY = 'pdk8bcv@oy$o4asp2100ymrv(0y$&qy5#oh-i($2s=j4fa4uvp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.241']
 
 # Application definition
 
@@ -131,6 +131,7 @@ INTERNAL_IPS = [
 CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.filebased.FileBasedCache",
-        "LOCATION": os.path.join(BASE_DIR, 'coolsite_cache')
+        # "LOCATION": os.path.join(BASE_DIR, 'coolsite_cache')
+        "LOCATION": "/tmp/coolsite_cache_SUPERSECRET"
     }
 }
